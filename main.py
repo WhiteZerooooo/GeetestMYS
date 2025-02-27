@@ -241,4 +241,4 @@ def do_verify(codes, pic, gt, challenge, c, s):
     return ""
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8001)
+    app.run(port=8080)
