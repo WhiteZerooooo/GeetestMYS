@@ -31,6 +31,11 @@ print("加载模型，耗时:", time.time() - start)
 
 badtime = 0
 
+@app.errorhandler(Exception)
+def handle_exception(e):
+    # 返回错误码201和错误信息
+    return jsonify({"error": str(e)}), 201
+
 @app.route('/nine', methods=['GET'])
 def nine():
     global badtime
@@ -241,4 +246,4 @@ def do_verify(codes, pic, gt, challenge, c, s):
     return ""
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(host='127.0.0.1', port=8001)
