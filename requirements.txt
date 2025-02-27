@@ -3,4 +3,4 @@ numpy
 Pillow
 requests
 onnxruntime
-execjs
+PyExecJS
